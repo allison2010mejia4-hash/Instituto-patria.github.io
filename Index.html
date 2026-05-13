@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto Patria</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#f9f9f9;
+}
+
+/* HEADER */
+.header{
+background:linear-gradient(to right,#0a8f87,#18c4d8);
+color:white;
+padding:20px;
+text-align:center;
+font-size:26px;
+font-weight:bold;
+}
+
+/* NAV */
+.nav{
+background:#222;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.nav a:hover{
+color:#00d1b2;
+}
+
+/* CARRUSEL */
+.carrusel{
+position:relative;
+height:70vh;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(60%);
+}
+
+.activo{
+opacity:1;
+}
+
+/* TEXTO */
+.texto{
+position:absolute;
+top:50%;
+left:10%;
+transform:translateY(-50%);
+color:white;
+}
+
+.texto h1{
+font-size:50px;
+}
+
+/* BOTONES */
+.btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+padding:12px 18px;
+cursor:pointer;
+border-radius:50%;
+font-size:25px;
+user-select:none;
+}
+
+.izq{
+left:10px;
+}
+
+.der{
+right:10px;
+}
+
+/* SECCIONES */
+.seccion{
+padding:60px 20px;
+text-align:center;
+}
+
+/* TARJETAS */
+.tarjetas{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.tarjeta{
+width:260px;
+padding:25px;
+background:white;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+text-decoration:none;
+color:inherit;
+display:block;
+transition:0.3s;
+}
+
+.tarjeta:hover{
+transform:scale(1.05);
+}
+
+/* INFO */
+.info{
+background:white;
+margin:30px auto;
+max-width:850px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+line-height:1.7;
+}
+
+/* VIDEO */
+.video{
+text-align:center;
+padding:50px 20px;
+}
+
+.video video{
+width:80%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+.footer{
+background:linear-gradient(to right,#003300,#0a8f87,#003300);
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.nav a{
+display:block;
+margin:10px;
+}
+
+.tarjetas{
+flex-direction:column;
+align-items:center;
+}
+
+.texto h1{
+font-size:30px;
+}
+
+.carrusel{
+height:50vh;
+}
+
+.video video{
+width:95%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+Instituto Patria
+</div>
+
+<!-- NAV -->
+<div class="nav">
+<a href="#inicio">Inicio</a>
+<a href="#carreras">Carreras</a>
+<a href="#actividades">Actividades</a>
+</div>
+
+<!-- CARRUSEL -->
+<div class="carrusel" id="inicio">
+
+<div class="slide activo">
+<img src="imagenes/Patria.jpeg" alt="Instituto Patria">
+<div class="texto">
+<h1>Educación Profesional</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/instituto.jpeg" alt="Instituto">
+<div class="texto">
+<h1>Aprende con los Mejores</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Carerras.jpeg" alt="Carreras">
+<div class="texto">
+<h1>Construye tu futuro</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Graduacion.jpeg" alt="Graduacion">
+<div class="texto">
+<h1>Graduate</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/informatica.jpeg" alt="Informatica">
+<div class="texto">
+<h1>Informatica</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Finanzas.jpeg" alt="Finanzas">
+<div class="texto">
+<h1>Finanzas</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Mercadotecnia.jpeg" alt="Mercadotecnia">
+<div class="texto">
+<h1>Mercadotecnia</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Asistente ejecutivo billingue.jpeg" alt="Asistente ejecutivo billingue">
+<div class="texto">
+<h1>Asistente ejecutivo billingue</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Humanidades.jpeg" alt="Humanidades">
+<div class="texto">
+<h1>Humanidades</h1>
+</div>
+</div>
+
+<div class="slide">
+<img src="imagenes/Administracion.jpeg" alt="Administracion">
+<div class="texto">
+<h1>Administracion</h1>
+</div>
+</div>
+
+
+
+<div class="btn izq" onclick="prev()">❮</div>
+<div class="btn der" onclick="next()">❯</div>
+
+</div>
+
+<!-- CARRERAS -->
+<div class="seccion" id="carreras">
+
+<h2>Carreras</h2>
+
+<div class="tarjetas">
+
+<a href="#info-informatica" class="tarjeta">
+<h3>Informática</h3>
+<p>Programación y tecnología.</p>
+</a>
+
+<a href="#info-contaduria" class="tarjeta">
+<h3>Contaduría</h3>
+<p>Finanzas y contabilidad.</p>
+</a>
+
+<a href="#info-mercadotecnia" class="tarjeta">
+<h3>Mercadotecnia</h3>
+<p>Publicidad y marketing.</p>
+</a>
+
+<a href="#info-bilingue" class="tarjeta">
+<h3>Asistente Bilingüe</h3>
+<p>Inglés y administración.</p>
+</a>
+
+<a href="#info-humanidades" class="tarjeta">
+<h3>Humanidades</h3>
+<p>Cultura y pensamiento.</p>
+</a>
+
+<a href="#info-administracion" class="tarjeta">
+<h3>Administración</h3>
+<p>Gestión empresarial.</p>
+</a>
+
+</div>
+</div>
+
+<!-- INFORMACIÓN -->
+<div class="info" id="info-informatica">
+<h2>Informática</h2>
+<p>
+Es una carrera enfocada en programación, páginas web, bases de datos,
+redes y sistemas informáticos.
+</p>
+</div>
+
+<div class="info" id="info-contaduria">
+<h2>Contaduría</h2>
+<p>
+Se encarga del control financiero, auditorías, presupuestos
+y administración contable.
+</p>
+</div>
+
+<div class="info" id="info-mercadotecnia">
+<h2>Mercadotecnia</h2>
+<p>
+Aprenderás publicidad, marketing digital, ventas
+y estrategias comerciales.
+</p>
+</div>
+
+<div class="info" id="info-bilingue">
+<h2>Asistente Bilingüe</h2>
+<p>
+Forma profesionales capaces de trabajar en inglés y español
+en áreas administrativas.
+</p>
+</div>
+
+<div class="info" id="info-humanidades">
+<h2>Humanidades</h2>
+<p>
+Estudia cultura, historia, filosofía y ciencias sociales.
+</p>
+</div>
+
+<div class="info" id="info-administracion">
+<h2>Administración</h2>
+<p>
+Se enfoca en liderazgo, organización y gestión empresarial.
+</p>
+</div>
+
+<!-- ACTIVIDADES -->
+<div class="seccion" id="actividades">
+
+<h2>Actividades</h2>
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+<h3>Ferias</h3>
+<p>Proyectos tecnológicos.</p>
+</div>
+
+<div class="tarjeta">
+<h3>Actos Cívicos</h3>
+<p>Eventos patrios.</p>
+</div>
+
+<div class="tarjeta">
+<h3>Festivales</h3>
+<p>Actividades recreativas.</p>
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO -->
+<div class="video">
+
+<h2>Video Institucional</h2>
+
+<video controls autoplay muted loop>
+<source src="imagenes/video.mp4" type="video/mp4">
+Tu navegador no soporta videos.
+</video>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<h3>Instituto Patria La Lima</h3>
+<p>Educando con excelencia</p>
+<p>Lisdy Anahi George Molina | 12 BTP Informática</p>
+<p>© 2026</p>
+</div>
+
+<script>
+
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
+function mostrarSlide(n){
+
+slides[i].classList.remove("activo");
+
+i=n;
+
+if(i>=slides.length){
+i=0;
+}
+
+if(i<0){
+i=slides.length-1;
+}
+
+slides[i].classList.add("activo");
+
+}
+
+function next(){
+mostrarSlide(i+1);
+}
+
+function prev(){
+mostrarSlide(i-1);
+}
+
+setInterval(next,4000);
+
+</script>
+
+</body>
+</html>
